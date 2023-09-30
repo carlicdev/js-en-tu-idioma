@@ -18,18 +18,8 @@ const PostDetails = async ({ params }) => {
   }
 
   return (
-    < div className='max-w-[1536px] w-full mx-auto px-2 lg:px-0 my-2'>
-      <div className='flex flex-wrap'>
-        <div className='w-full lg:w-3/4 lg:pr-4'>
+    < div className='w-full mb-2'>
           <PostDetail post={post} />
-        </div>
-        <div className='w-full lg:w-1/4 mt-4 lg:mt-0'>
-          <LastPostsCard />
-          <Tags />
-          <Subscribe />
-          <CTAContact />
-        </div>
-      </div>
     </div>
   )
 }

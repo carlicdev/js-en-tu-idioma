@@ -20,7 +20,7 @@ const Subscribe = () => {
   }
 
   return (
-    <div className='card rounded-lg p-5 flex flex-col'>
+    <div className='card rounded-lg p-5 flex flex-col mb-4'>
       <p className='text-center text-lg mb-2'>Suscríbete para enterarte de las últimas noticias de <span className='text-yellow-500'>JavaScript</span></p>
       <div>
         <form

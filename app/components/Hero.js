@@ -7,20 +7,16 @@ const Hero = () => {
     const { theme } = useContext(ThemeContext)
 
   return (
-    <div className="w-full p-2 ">
+    <div className="w-full">
         <div className="card max-w-[1536px] w-full flex flex-wrap mx-auto rounded-xl p-5">
             <div className="w-full lg:w-1/2 flex flex-col justify-center items-center">
                 <div>
-                    <h2 className="font-bold text-xl lg:text-5xl mb-2"><span className="text-yellow-500 font-black">JavaScript</span> en tu idioma</h2>
-                    <p className="font-medium lg:text-2xl mb-4">Artículos, noticias y tutoriales de todo lo que tenga <br className="hidden lg:block" />que ver con 
+                    <h2 className="font-black text-4xl lg:text-6xl mb-5"><span className="text-yellow-500 font-black">JavaScript</span> en español</h2>
+                    <p className="font-medium lg:text-2xl mb-5">Artículos, noticias y tutoriales de todo lo que tenga que ver con 
                         <span className="text-yellow-500 font-bold"> JavaScript</span>, 
                         <span className="text-green-500 font-bold"> Node</span> y 
                         <span className="text-blue-400 font-bold"> React</span>.
                     </p>
-                    <label className="flex "> 
-                        <button className="px-6 py-2 rounded-l-lg text-white bg-red-400 peer-focus:border peer-focus:border-red-400">SUSCRÍBETE</button>
-                        <input type="email" className="peer rounded-r-lg text-black px-1 w-full outline-none focus:outline-red-400"/>
-                    </label>
                 </div>
             </div>
             <div className="w-full lg:w-1/2 h-[300px]" style={{ backgroundImage: `${ theme === 'dark' ? 'url(./blob-haikei.png)' : 'url(./blob-light.png)'}`}}>

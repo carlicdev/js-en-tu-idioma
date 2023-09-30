@@ -2,7 +2,7 @@ import React from 'react'
 
 const CTAContact = () => {
   return (
-<div className='card p-5 w-full rounded-lg flex flex-col my-4 text-center'>
+<div className='card p-5 w-full rounded-lg flex flex-col mb-4 text-center'>
     <p className='text-lg mb-2'>¿Necesitas ayuda con tu código?</p>
     <img src='./headset-7727268_1280.png' alt='supportImg' className='h-[80px] w-[80px] mb-4 mx-auto'/>
     <p className='text-lg mb-4'>Programa una asesoría.</p>

@@ -2,6 +2,8 @@ TODO
 -write first post
 -add authorcard
 -backend suscribe
+    - nodemailer
+    - mongo db add email
 - comments
 -navigation
 - footer links?
