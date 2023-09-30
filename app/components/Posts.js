@@ -2,7 +2,6 @@
 import PostCard from './PostCard';
 
 const Posts = ({posts}) => {
-    const firstPost = posts[0]
 
     if (posts.length) {
         return (
