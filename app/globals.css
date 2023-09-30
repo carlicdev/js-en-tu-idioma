@@ -2,26 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.light {
+  background-color: white;
+  color: black
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.dark {
+  background-color: #1e293b;
+  color: white;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.dark .card {
+  background-color: #0f172a;
+  color: white
+}
+
+.light .card {
+  background-color: #f8fafc;
+  color: black;
+}
+
+.dark .tag {
+  background-color: black;
+}
+
+.light .tag {
+  background-color: white;
+}
+
+.dark .card-title {
+  background-color:  #1e293b;
+}
+
+.light .card-title {
+  background-color: white;
 }
