@@ -4,7 +4,6 @@ import Link from 'next/link';
 
 const LastPostsCard = async () => {
     const posts = await getRecentPosts();
-    posts.reverse()
 
     if (!posts) {
         return <div>Loading...</div>
@@ -17,7 +16,7 @@ const LastPostsCard = async () => {
         </div>
         <div className='flex flex-col gap-2 justify-center'>
             {
-                posts.map((post, index) => (
+                posts.reverse().map((post, index) => (
                     <Link href={`/post/${post.slug}`} key={index}>
                         <p>{post.title}</p>
                     </Link>

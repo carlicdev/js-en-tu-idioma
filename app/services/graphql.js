@@ -192,6 +192,6 @@ export const getFeaturedPosts = async () => {
   
       return result.posts; 
     } catch (err) {
-      console.log('Eror at getRecentPosts', err.message)
+      console.log('Error at getRecentPosts', err.message)
     }
 }
