@@ -1,5 +1,5 @@
 "use client"
-
+import Image from "next/image"
 import { useContext } from "react"
 import { ThemeContext } from "../context/ThemeContext"
 
@@ -21,7 +21,7 @@ const Hero = () => {
             </div>
             <div className="w-full lg:w-1/2 h-[300px]" style={{ backgroundImage: `${ theme === 'dark' ? 'url(./blob-haikei.png)' : 'url(./blob-light.png)'}`}}>
                 <div className="w-full flex items-center justify-center h-full">
-                    <img src={'./laptop-41070.svg'} alt='laptop' className="w-[228px] lg:w-[350px]"/>
+                    <Image width={228} height={228} src={'./laptop-41070.svg'} alt='laptop' className="w-[228px] lg:w-[350px]"/>
                 </div>
             </div>
         </div>

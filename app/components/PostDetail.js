@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image';
 import styleDate from '../utils/date'
 import { TbPointFilled } from 'react-icons/tb'
 import Link from 'next/link';
