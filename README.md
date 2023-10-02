@@ -3,7 +3,7 @@ TODO
 -add authorcard
 -backend suscribe
     - nodemailer
-    - mongo db add email
+    - mongo db add email[X]
 - comments
 -navigation
 - footer links?

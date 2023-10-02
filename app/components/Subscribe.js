@@ -14,9 +14,21 @@ const Subscribe = () => {
     setForm({...form, [name]: value })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('subscribe:', form.email)
+    
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({email: form.email})
+      });
+
+      const data = await response.json();
+      console.log('Data from /api/subscribe', data);
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   return (
