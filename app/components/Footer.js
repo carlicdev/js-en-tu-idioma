@@ -1,11 +1,15 @@
-import React from 'react'
+"use client"
+
 import Logo from './Logo'
+import { usePathname } from 'next/navigation'
 import { FaGithubSquare, FaInstagramSquare } from 'react-icons/fa'
 import { FaSquareXTwitter, FaLinkedin } from 'react-icons/fa6'
 import Link from 'next/link'
 import Subscribe from './Subscribe'
 
 const Footer = () => {
+    const pathname = usePathname();
+
   return (
     <div className='w-full card'>
         <div className='max-w-[1536px] w-full mx-auto mt-10'>
@@ -21,7 +25,7 @@ const Footer = () => {
                 </div>
                 <div className='w-full md:w-1/2 lg:w-1/3 flex flex-col items-center mb-4'>
                     <div className='flex flex-col gap-4'>
-                        <Link href={'/about'}>
+                        <Link href={'/about'} >
                             <p>About</p>
                         </Link>
                         <Link href={'/contacto'}>

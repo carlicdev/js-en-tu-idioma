@@ -9,12 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-email/button": "^0.0.10",
+    "@react-email/head": "^0.0.5",
+    "@react-email/html": "^0.0.4",
+    "@react-email/render": "^0.0.7",
+    "@react-email/text": "^0.0.5",
     "graphql": "^16.8.1",
     "graphql-request": "^6.1.0",
     "mongoose": "^7.5.3",
     "next": "latest",
+    "nodemailer": "^6.9.5",
     "react": "latest",
     "react-dom": "latest",
+    "react-email": "^1.9.5",
     "react-icons": "^4.11.0"
   },
   "devDependencies": {

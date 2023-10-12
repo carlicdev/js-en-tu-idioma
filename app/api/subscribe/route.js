@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import dbConnect from "@/app/lib/dbConnect";
 import Subscriber from "@/app/models/Subscriber";
+import sendWelcomeEmail from "@/app/lib/sendWelcomeEmail";
 
 export async function POST(request) {
     try {
@@ -14,7 +15,8 @@ export async function POST(request) {
 
         if (alreadySubscribed) {
             return NextResponse.json({
-                message: 'El email que proporcionaste ya está registrado en el sistema. Por favor, utiliza otro correo electrónico.'
+                message: 'El email que proporcionaste ya está registrado en el sistema. Por favor, utiliza otro correo electrónico.',
+                status: 409
             }, {
                 status: 409
             })
@@ -24,9 +26,11 @@ export async function POST(request) {
         await Subscriber.create({email: email});
 
         // enviar correo de bienvenida
+        await sendWelcomeEmail(email)
 
         return NextResponse.json({
-            message: 'Gracias por suscribirte. Por favor revisa tu bandeja de entrada.'
+            message: 'Gracias por suscribirte. Por favor revisa tu bandeja de entrada.',
+            status: 200
         }, {
             status: 200
         })
@@ -34,7 +38,8 @@ export async function POST(request) {
     } catch(err) {
         console.log('An error subscribing new user', err);
         return NextResponse.json({
-            message: 'No hemos podido registrarte a nuestra base de datos. Por favor intenta de nuevo.'
+            message: 'No hemos podido registrarte a nuestra base de datos. Por favor intenta de nuevo.',
+            status: 500
         }, {
             status: 500
         })

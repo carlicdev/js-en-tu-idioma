@@ -1,9 +1,12 @@
+"use client"
 import Link from 'next/link'
-import React from 'react'
+import { usePathname } from 'next/navigation'
 import ThemeToggle from './ThemeToggle'
 import Logo from './Logo'
 
 const Navbar = () => {
+  const pathname = usePathname();
+
   return (
     <div className='p-2 w-full'>
         <div className='card max-w-[1536px] w-full mx-auto lg:p-3 p-2 py-5 text-white rounded-lg flex items-end'>
@@ -11,10 +14,13 @@ const Navbar = () => {
                 <Logo />
             </Link>
             <div className='hidden lg:flex mx-auto  gap-[45px] '>
-              <Link href={'/about'}>
+              <Link href={'/'} className={`${pathname === '/' ? 'border-b-2 border-yellow-500' : ''}`}>
+                <p className='text-xl'>Home</p>
+              </Link>
+              <Link href={'/about'} className={`${pathname === '/about' ? 'border-b-2 border-yellow-500' : ''}`}>
                 <p className='text-xl'>About</p>
               </Link>
-              <Link href={'/contacto'}>
+              <Link href={'/contacto'} className={`${pathname === '/contacto' ? 'border-b-2 border-yellow-500' : ''}`}>
                 <p className='text-xl'>Contacto</p>
               </Link>
             </div>
