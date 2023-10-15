@@ -29,7 +29,7 @@ const PostDetail = ({post}) => {
 
           if (obj.code) {
             modifiedText = (
-                <div key={index} className='max-w-4xl mx-auto p-2 bg-black text-gray-200 font-thin'>
+                <div key={index} className='font-mono mx-auto px-2 py-4 bg-black text-gray-200 font-thin'>
                     {text}
                 </div>
                 );
@@ -46,12 +46,12 @@ const PostDetail = ({post}) => {
             }</React.Fragment>
           case 'block-quote':
             return <p key={index} className="text-lg font-semibold text-black my-4 p-4 bg-gray-100 border-l-2  border-blue-500">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
-          case 'heading-three':
-            return <h3 key={index} className="text-xl font-bold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
+          case 'heading-two':
+            return <h2 key={index} className="text-2xl font-black mb-4 mt-10">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2>;
           case 'paragraph':
             return <p key={index} className="my-4 text-justify font-light">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
           case 'heading-four':
-            return <h4 key={index} className="text-md font-bold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
+            return <h4 key={index} className="text-md font-bold mb-4 mt-5">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
           case 'image':
             return (
               <img
@@ -60,7 +60,7 @@ const PostDetail = ({post}) => {
                 height={obj.height}
                 width={obj.width}
                 src={obj.src}
-                className='mx-auto my-5'
+                className='mx-auto my-5 rounded-lg'
               />
             );
           default:
