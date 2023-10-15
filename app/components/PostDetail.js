@@ -41,7 +41,7 @@ const PostDetail = ({post}) => {
           case 'bulleted-list':
             return <React.Fragment key={index}>{
                 obj.children.map(({children}, index) => (
-                    <p key={index} className='flex items-start mb-1 text-justify'><span className='mt-1'><TbPointFilled/></span>{children[0].children[0].text}</p>
+                    <p key={index} className='flex items-start mb-1 text-justify font-light'><span className='mt-1'><TbPointFilled/></span>{children[0].children[0].text}</p>
                 ))
             }</React.Fragment>
           case 'block-quote':
@@ -49,7 +49,7 @@ const PostDetail = ({post}) => {
           case 'heading-three':
             return <h3 key={index} className="text-xl font-bold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
           case 'paragraph':
-            return <p key={index} className="my-4 text-justify">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
+            return <p key={index} className="my-4 text-justify font-light">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
           case 'heading-four':
             return <h4 key={index} className="text-md font-bold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
           case 'image':

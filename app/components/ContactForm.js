@@ -67,6 +67,14 @@ const ContactForm = () => {
         setServerMsg(data.message)
         setServerStatus(data.status)
       }
+      if (data.status === 200){
+        setForm({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        })
+      }
     } catch (err) {
       setPending(false)
       setServerMsg(err.message)
@@ -168,7 +176,7 @@ const ContactForm = () => {
         {
           pending ? (
             <div className='flex gap-2 items-center'>
-            <span className='text-xl'><AiOutlineReload /></span>
+            <span className='text-xl animate-spin'><AiOutlineReload /></span>
             <p>Enviando</p>
             </div>
           ) : (

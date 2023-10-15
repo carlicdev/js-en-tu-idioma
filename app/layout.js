@@ -9,7 +9,7 @@ import './globals.css'
 import { Poppins } from 'next/font/google'
 
 const poppins = Poppins({ 
-  weight: '300',
+  weight: ['300', '500', '700'],
   subsets: ['latin'] 
 })
 

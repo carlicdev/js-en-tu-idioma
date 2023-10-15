@@ -19,7 +19,7 @@ const LastPostsCard = async () => {
             {
                 posts.map((post, index) => (
                     <Link href={`/post/${post.slug}`} key={index}>
-                        <p>{post.title}</p>
+                        <p className='font-light'>{post.title}</p>
                     </Link>
                 ))
             }

@@ -18,8 +18,14 @@ export default async function Home() {
   return (
     <main className="w-full flex flex-col gap-4">
       <Hero />
-      <Featured post={posts[0].node}/>
-      <Posts posts={posts} />   
+      {
+        posts && (
+          <>
+          <Featured post={posts[0].node}/>
+          <Posts posts={posts} />   
+          </>
+        )
+      }
     </main>
   )
 }

@@ -8,7 +8,7 @@ const PostCard = ({post}) => {
         <img src={post.node.featuredImage.url} alt='blogImg' className="w-full h-[150px] rounded mb-2" />
         <p className="font-semibold text-gray-500 text-xs mb-1">{styleDate(post.node.createdAt)}</p>
         <p className="font-black mb-2">{post.node.title}</p>
-        <p className='text-sm text-justify mb-4'>{post.node.excerpt.slice(0,150)}...</p>
+        <p className='text-sm text-justify mb-4 font-light'>{post.node.excerpt.slice(0,150)}...</p>
         <div className="flex flex-wrap gap-2 mb-4">
             {
                 post.node.categories.map((category, index) => (
